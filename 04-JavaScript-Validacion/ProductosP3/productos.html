@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Práctica - Layout con Grid</title>
+    <!-- Enlazamos la hoja de estilos -->
+    <link rel="stylesheet" href="productos.css">
+</head>
+
+<!-- El body será el contenedor principal del grid -->
+
+<body class="contenedor">
+    <!-- CABECERA (FILA 1) -->
+    <header id="cabecera">
+        <!-- Grid interno 80% / 20%: izquierda título, derecha buscador -->
+        <div class="cabecera_grid">
+            <!-- Columna izquierda: título + descripción, ambos enlazan a index -->
+            <div class="titulo_web">
+                <h1><a href="index.html">Viajes JaviEs</a></h1>
+                <p><a href="index.html">Viajes al mejor precio del mundo</a></p>
+            </div>
+
+            <!-- Columna derecha: buscador que manda la búsqueda a Google -->
+            <div class="buscador_web">
+                <form action="https://www.google.com/search" method="get" target="_blank">
+                    <!-- name="q" es el parámetro que entiende Google -->
+                    <input id="busqueda" name="q" type="text" placeholder="Buscar en Google..." />
+                    <input type="submit" value="Buscar" />
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- MENÚ HORIZONTAL (FILA 2) -->
+    <nav id="menu">
+        <!-- Lista principal (nivel 1). El submenú va dentro de Productos -->
+        <ul class="lista_menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li>
+                <a href="productos.html">Productos</a>
+                <!-- Submenú (nivel 2), desplegable al pasar el ratón -->
+                <ul class="submenu">
+                    <li><a href="productos.html#America">America</a></li>
+                    <li><a href="productos.html#Europa">Europa</a></li>
+                    <li><a href="productos.html#Asia">Asia</a></li>
+                </ul>
+            </li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL (FILA 3, IZQUIERDA) -->
+    <main id="principal">
+        <section id="continente">
+            <div class="intro">
+                <h2 id="America">America</h2>
+                <p>🌎 Conoce el continente americano, un mosaico de culturas y paisajes que te sorprenderán.</p>
+                <p><a href="https://es.wikipedia.org/wiki/Am%C3%A9rica">para mas información click aquí</a></p>
+                <img src="https://thumbs.dreamstime.com/b/collage-con-paisajes-coloridos-del-verano-52176659.jpg"
+                    alt="jeje">
+            </div>
+
+
+            <div class="productos">
+                <div class="producto">
+                    <h3 class="Nombre">Estados Unidos</h3>
+                    <img src="https://www.ytravelblog.com/wp-content/uploads/2018/07/statue-of-liberty-cruise-5-1.jpg"
+                        alt="jeje">
+                    <p class="pJava">7,05$</p>
+                    <p>Clase economica</p>
+                    <input type="button" value="Añadir" onclick="addToCart(this)"/>
+                </div>
+                <div class="productoPrem">
+                    <h3 class="Nombre">Mexico</h3>
+                    <img src="https://www.rci.com/static/images/content/_NAMER/landing/cancun/C94-hero-800x1100.jpg"
+                        alt="jeje">
+                    <div class="precio">
+                        <span class="precio-original">9,00$</span>
+                        <span class="precio-nuevo" class="pJava">7,05$</span>
+                    </div>
+                    <p>Primera clase</p>
+                    <input type="button" value="Añadir" onclick="addToCart(this)"/>
+                </div>
+                <div class="producto">
+                    <h3 class="Nombre">Panama</h3>
+                    <img src="https://th.bing.com/th/id/R.ff9a07013c9cf7427ce6f0e480e86e72?rik=Uy4HcNUnjVIkmg&pid=ImgRaw&r=0"
+                        alt="jeje">
+                    <p class="pJava">7,05$</p>
+                    <p>Clase economica</p>
+                    <input type="button" value="Añadir" onclick="addToCart(this)"/>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="intro">
+                <h2 id="Europa">Europa</h2>
+                <p>🏰 Conoce el continente Europeo, donde la historia se mezcla con la modernidad en cada ciudad.</p>
+                <p><a href="https://es.wikipedia.org/wiki/Europa">para mas información click aquí</a></p>
+                <img src="https://static.vecteezy.com/system/resources/previews/025/799/480/non_2x/ai-generate-free-europe-collage-concept-free-photo.jpg"
+                    alt="jeje">
+            </div>
+
+
+            <div class="productos">
+                <div class="producto">
+                    <h3 class="Nombre">Italia</h3>
+                    <img src="https://wallpaperaccess.com/full/46399.jpg" alt="jeje">
+                    <p class="pJava">7,05$</p>
+                    <p>Clase economica</p>
+                    <input type="button" value="Añadir" onclick="addToCart(this)"/>
+                </div>
+                <div class="productoPrem">
+                    <h3 class="Nombre">España</h3>
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.Z133TCKt4LLu5K0TBHU2HgHaE7?rs=1&pid=ImgDetMain&o=7&rm=3"
+                        alt="jeje">
+                    <div class="precio">
+                        <span class="precio-original">9,00$</span>
+                        <span class="precio-nuevo" class="pJava">7,05$</span>
+                    </div>
+                    <p>Primera clase</p>
+                    <input type="button" value="Añadir" onclick="addToCart(this)"/>
+                </div>
+                <div class="producto">
+                    <h3 class="Nombre">Francia</h3>
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.Kl-sF_HD86HM1g_7gK7D7AHaLH?rs=1&pid=ImgDetMain&o=7&rm=3"
+                        alt="jeje">
+                    <p class="pJava">7,05$</p>
+                    <p>Clase economica</p>
+                    <input type="button" value="Añadir" onclick="addToCart(this)"/>
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <div class="intro">
+                <h2 id="Asia">Asia</h2>
+                <p>🐉 Conoce el continente asiático, donde la espiritualidad y la modernidad conviven en armonía.</p>
+                <p><a href="https://en.wikipedia.org/wiki/Asia">para mas información click aquí</a></p>
+                <img src="https://thumbs.dreamstime.com/b/postal-de-jap%C3%B3n-colecci%C3%B3n-tarjetas-postales-collage-con-tokyo-kyoto-osaka-mount-fuji-y-nara-180393084.jpg"
+                    alt="jeje">
+            </div>
+
+
+            <div class="productos">
+                <div class="producto">
+                    <h3 class="Nombre">China</h3>
+                    <img src="https://th.bing.com/th/id/OIP.DArheQUz_nJAwUnr6_ZFUAHaE4?w=266&h=180&c=7&r=0&o=7&pid=1.7&rm=3"
+                        alt="jeje">
+                    <p class="pJava">7,05$</p>
+                    <p>Clase economica</p>
+                    <input type="button" value="Añadir" onclick="addToCart(this)"/>
+                </div>
+                <div class="productoPrem">
+                    <h3 class="Nombre">Japon</h3>
+                    <img src="https://www.urlaubstracker.de/wp-content/uploads/2019/03/japan-fuji-himeji-castle.jpg"
+                        alt="jeje">
+                    <div class="precio">
+                        <span class="precio-original">9,00$</span>
+                        <span class="precio-nuevo" class="pJava">7,05$</span>
+                    </div>
+                    <p>Primera clase</p>
+                    <input type="button" value="Añadir" onclick="addToCart(this)"/>
+                </div>
+                <div class="producto">
+                    <h3 class="Nombre">Korea</h3>
+                    <img src="https://wallpapercave.com/wp/wp2037803.jpg" alt="jeje">
+                    <p class="pJava">7,05$</p>
+                    <p>Clase economica</p>
+                    <input type="button" value="Añadir" onclick="addToCart(this)"/>
+                </div>
+            </div>
+        </section>
+        <section id="Reseñas">
+            <h3> Reseñas </h3>
+            <div>                
+                <h4> Pepe Carlos </h4>
+                <p> Me encanto el viaje sobre todo el piloto Esterly </p>
+            </div>
+            <div>
+                <h4> Carlos Pepe </h4>
+                <p> Me encanto el viaje sobre todo el piloto Esterly </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- INFOGRAFÍA (FILA 3, DERECHA) -->
+    <section id="infografia">
+        <!--Contenedor para la infografia-->
+        <div class="infografia-contenedor">
+            <div class="infografia-titulo">
+                <h2>Infografía</h2>
+                <h3>4 Easy Ways to Reduce Your Plastic Waste</h3>
+            </div>
+            <!--Sección tipo 1-->
+            <div class="section-tipo1">
+                <div class="cajaDeTexto">
+                    <h4>Bring your own shopping bag</h4>
+                    <p>Reduce plastic waste by bringing your own reusable produce bags or skipping them entirely.</p>
+                </div>
+                <div class="cajaDeImagen">
+                    <img src="img/bolso.jpg" alt="Bolso_Reutilizable">
+                </div>
+            </div>
+            <!--Sección tipo 2-->
+            <div class="section-tipo2">
+                <div class="cajaDeTexto">
+                    <h4>Stop buying bottled water</h4>
+                    <p>Unless there's some kind of contamination crisis, plastic water bottles
+                        are an easy target for reducing waste.</p>
+                </div>
+                <div class="cajaDeImagen">
+                    <img src="img/botella.png" alt="Botella_de_plastico">
+                </div>
+            </div>
+            <!--Sección tipo 1-->
+            <div class="section-tipo1">
+                <div class="cajaDeTexto">
+                    <h4>Bring your own tumbler</h4>
+                    <p>Bringing your own tumbler for to-go coffee is another way to reduce your plastic footprint.</p>
+                </div>
+                <div class="cajaDeImagen">
+                    <img src="img/botella_reutilizable.png" alt="Botella_reutilizable">
+                </div>
+            </div>
+            <!--Sección tipo 2-->
+            <div class="section-tipo2">
+                <div class="cajaDeTexto">
+                    <h4>Say no to straws</h4>
+                    <p>Plastic straws are often a single-use item that's just not necessary.</p>
+                </div>
+                <div class="cajaDeImagen">
+                    <img src="img/pagitas.png" alt="Pajitas">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div>
+            <h2>Carrito</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoTabla">
+
+                </tbody>
+            </table>
+            <p> Total: <span id="total">0.00</span> euros</p>
+        </div>
+    </section>
+    <!-- PIE DE PÁGINA (FILA 4) -->
+    <footer id="pie">
+        <!-- Columna 1: autor en varias líneas -->
+        <div class="footer-col footer-autor">
+            <p>Autor: Esterly y Javi C.</p>
+            <p>Asignatura: Tecnologías Web</p>
+            <p>Curso 2025/2026</p>
+        </div>
+        <!-- Columna 2: icono validador CSS -->
+        <div class="footer-col footer-css">
+            <a href="https://jigsaw.w3.org/css-validator/" target="_blank">
+                <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS válido" />
+            </a>
+        </div>
+        <!-- Columna 3: redes sociales (2 enlaces con imagen) -->
+        <div class="footer-col footer-redes">
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="img/twiter.webp" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="img/instagram.png" alt="Instagram">
+            </a>
+        </div>
+        <!-- Columna 4: enlaces de interés -->
+        <div class="footer-col footer-enlaces">
+            <ul>
+                <li><a href="https://www.umh.es" target="_blank">UMH</a></li>
+                <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+                <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+<script type="text/javascript" src="script2.js"></script>
+
+</html>

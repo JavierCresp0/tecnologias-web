@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE school SYSTEM "school.dtd">
+
+<school>
+    <student id="s001" status="active">
+        <name>Juan Pérez</name>
+        <age>20</age>
+    </student>
+    
+    <student id="s002" status="inactive">
+        <name>María García</name>
+        <age>19</age>
+    </student>
+    
+    <student id="s003">
+        <name>Carlos López</name>
+        <age>21</age>
+    </student>
+    
+    <student id="s004" status="graduated">
+        <name>Ana Martínez</name>
+        <age>22</age>
+    </student>
+    
+    <student id="s005" status="active">
+        <name>Pedro Rodríguez</name>
+        <age>18</age>
+    </student>
+</school>

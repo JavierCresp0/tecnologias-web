@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<?xml-stylesheet type="text/xsl" href="empresa.xsl"?>
+<empresa nombre="TechNova S.A." pais="España">
+    <departamento nombre="Ventas" codigo="D01" responsable="Laura Martínez">
+        <empleado id="E01" puesto="Vendedor" tipo="Fijo">
+            <nombre>Ana López</nombre>
+            <edad>32</edad>
+            <salario>2200</salario>
+        </empleado>
+        <empleado id="E02" puesto="Jefe de Ventas" tipo="Fijo">
+            <nombre>Carlos Gómez</nombre>
+            <edad>41</edad>
+            <salario>3100</salario>
+        </empleado>
+    </departamento>
+    <departamento nombre="IT" codigo="D02" responsable="Miguel Torres">
+        <empleado id="E03" puesto="Desarrolladora" tipo="Fijo">
+            <nombre>Lucía Pérez</nombre>
+            <edad>28</edad>
+            <salario>3500</salario>
+        </empleado>
+        <empleado id="E04" puesto="Administrador de Sistemas" tipo="Fijo">
+            <nombre>Juan Torres</nombre>
+            <edad>36</edad>
+            <salario>4000</salario>
+        </empleado>
+        <empleado id="E05" puesto="Becaria" tipo="Temporal">
+            <nombre>Sara Díaz</nombre>
+            <edad>23</edad>
+            <salario>1200</salario>
+        </empleado>
+    </departamento>
+</empresa> 

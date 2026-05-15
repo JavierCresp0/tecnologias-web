@@ -1,0 +1,434 @@
+/* 0. PALETA DE COLORES */
+:root {
+  --color1: #1b325f;
+  --color2: #9cc4e4;
+  --color3: #e9f2f9;
+  --color4: #3a89c9;
+  --color5: #f26c4f;
+  --color6: white;
+}
+
+/*1. ESTILOS GENERALES*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--color3);
+  color: var(--color1);
+}
+
+/* Enlaces sin subrayado por defecto */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 2. GRID PRINCIPAL (BODY) */
+
+/* El body .contenedor es la rejilla general 4x4 */
+.contenedor {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "cabecera  cabecera  cabecera  cabecera"
+    "menu      menu      menu      menu"
+    "contenido contenido contenido infografia"
+    "footer   footer    footer   footer";
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid var(--color2);
+  /* solo para ver el marco general */
+}
+
+/* Asignar cada bloque a su zona del grid */
+#cabecera {
+  grid-area: cabecera;
+}
+
+#menu {
+  grid-area: menu;
+}
+
+#principal {
+  grid-area: contenido;
+}
+
+#infografia {
+  grid-area: infografia;
+}
+
+#pie {
+  grid-area: footer;
+}
+
+/* Un poco de espacio interior para todas las zonas */
+#cabecera,
+#menu,
+#principal,
+#infografia,
+#pie {
+  padding: 10px 15px;
+}
+
+/* 3. CABECERA (2 COLUMNAS 80% / 20%)*/
+
+#cabecera {
+  background-color: var(--color3);
+  border-bottom: 1px solid var(--color2);
+}
+
+/* Grid interno: col 1 (título+descripción), col 2 (buscador) */
+.cabecera_grid {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  /* ~80% / 20% */
+  gap: 10px;
+  align-items: center;
+  /* centra verticalmente ambos bloques */
+}
+
+/* Título y descripción */
+.titulo_web h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.titulo_web p {
+  margin: 3px 0 0;
+  font-size: 0.95rem;
+  color: var(--color1);
+}
+
+/* Enlaces del título y descripción */
+.titulo_web a {
+  color: var(--color1);
+}
+
+/* Bloque del buscador pegado a la derecha de su columna */
+.buscador_web {
+  justify-self: end;
+}
+
+/* Formulario en fila: input + botón */
+.buscador_web form {
+  display: flex;
+  gap: 5px;
+}
+
+.buscador_web input[type="text"] {
+  padding: 4px 6px;
+  font-size: 0.9rem;
+}
+
+.buscador_web input[type="submit"] {
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: var(--color4);
+  color: white;
+  border: 1px solid var(--color4);
+}
+
+/* 4. MENÚ HORIZONTAL + SUBMENÚ */
+
+#menu {
+  background-color: var(--color2);
+  border-top: 1px solid var(--color4);
+  border-bottom: 1px solid var(--color4);
+}
+
+/* Lista principal del menú */
+.lista_menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Poner los <li> del nivel 1 en horizontal */
+.lista_menu>li {
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+}
+
+/* Enlaces del menú principal */
+.lista_menu>li>a {
+  padding: 6px 10px;
+  color: var(--color1);
+}
+
+/* Hover sencillo usando la paleta */
+.lista_menu>li>a:hover {
+  background-color: var(--color4);
+  color: white;
+}
+
+/* Submenú (Playas / Aventura / Ciudades) */
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--color3);
+  border: 1px solid var(--color4);
+  display: none;
+}
+
+/* Enlaces dentro del submenú */
+.submenu li a {
+  display: block;
+  padding: 5px 10px;
+  white-space: nowrap;
+  color: var(--color1);
+}
+
+/* Mostrar el submenú al pasar el ratón por el <li> Productos */
+.lista_menu li:hover>.submenu {
+  display: block;
+}
+
+/* 5. CONTENIDO PRINCIPAL  de las noticias */
+/* 5. CONTENIDO PRINCIPAL DE LAS NOTICIAS */
+
+/* Contenedor centrado */
+#container2{max-width:900px;margin:0 auto;background:#fff;padding:1.25rem;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,0.06);
+    display: grid;
+    gap: 1rem 2rem; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "Fname  Lname"
+        "Street Street"
+        "Apartment Apartment"
+        "City State"
+        "Zip Email"
+        "Phone Type"
+        "DNI IBAN"
+        "Boton Boton";
+}
+
+/* asignar áreas a los hijos */
+#fname{ grid-area: fname; }
+#lname{ grid-area: lname; }
+#street{ grid-area: street; }
+#apartment{ grid-area: apartment; }
+#city{ grid-area: city; }
+#zip{ grid-area: zip; }
+#email{ grid-area: email; }
+#phone{ grid-area: phone; }
+#type{ grid-area: type; }
+/*
+#boton{ grid-area: boton; display:flex; justify-content:right; 
+}*/
+#Boton {
+  grid-area: Boton;
+  display: flex;
+  justify-content: flex-end;   /* lo coloca a la derecha */
+  align-items: center;
+}
+#State input {
+  width: 100%;
+  padding: 0.5rem; 
+  box-sizing: border-box;
+}
+/* Label visible encima del campo (regla WAI) */
+label{display:block;margin-top:0.5rem;margin-bottom:0.25rem;font-weight:600;font-size:0.95rem;}
+
+/* Inputs full-width y táctil-friendly (regla WAI sobre usabilidad) */
+input[type="text"], input[type="email"], textarea, input[type="tel"], input[type="number"]{
+  width:100%;
+  padding:0.5rem;
+  font-size:1rem;
+  border:1px solid #d1d5db;
+  border-radius:8px;
+  outline:none;
+}
+
+/* Enfoque visible (regla WAI de accesibilidad) */
+input:focus, textarea:focus{
+  box-shadow: 0 0 0 var(--focus-ring) rgba(59,130,246,0.15);
+  border-color: #3b82f6;
+}
+input:focus, textarea:focus{ box-shadow:0 0 0 4px rgba(59,130,246,0.08); border-color:#3b82f6; }
+button{background:#2563eb;color:#fff;padding:0.6rem 0.9rem;border-radius:8px;border:0;font-weight:600;cursor:pointer;}
+
+
+/* 6. INFOGRAFÍA CON CAJAS INDEPENDIENTES */
+
+/* Fondo de color  y algo de espacio alrededor */
+#infografia {
+  background-color: var(--color3);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* Título dentro de la infografía */
+.infografia-titulo {
+  text-align: center;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background-color: var(--color6);
+  border: 1px solid var(--color2);
+  margin-bottom: 15px;
+}
+
+.infografia-titulo h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--color1);
+}
+
+.infografia-titulo h3 {
+  margin: 4px 0 0 0;
+  font-size: 0.95rem;
+  color: var(--color4);
+}
+
+/* Contenedor vertical de los pasos */
+.infografia-contenedor {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Contenedor de la fila (Padre invisible) */
+.section-tipo1,
+.section-tipo2 {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  /* Separación vertical entre filas */
+}
+
+/* Para alternar el orden visualmente usando Flexbox [cite: 3702] */
+.section-tipo2 {
+  flex-direction: row-reverse;
+}
+
+/* --- ESTILO DE LAS CAJAS INDIVIDUALES --- */
+
+.cajaDeTexto {
+  flex: 2;
+  /* Aplicamos el Modelo de Caja aquí  */
+  background-color: var(--color6);
+  border: 1px solid var(--color2);
+  /* Borde completo y simple */
+  padding: 15px;
+  /* Relleno interior [cite: 3426] */
+  border-radius: 8px;
+  /* Opcional: bordes redondeados */
+}
+
+.cajaDeTexto h4 {
+  margin: 0 0 5px 0;
+  color: var(--color1);
+  font-size: 1rem;
+}
+
+.cajaDeTexto p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Caja de Imagen (Hijo 2) */
+.cajaDeImagen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Estilo de caja independiente */
+  background-color: var(--color6);
+  border: 1px solid var(--color2);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.cajaDeImagen img {
+  width: 70px;
+  height: auto;
+}
+
+/* 6 Pie en 4 columnas simples (se puede mejorar después) */
+/* PIE DE PÁGINA: 4 columnas iguales, centradas */
+#pie {
+  /* si usas grid-template-areas, aquí podrías poner: grid-area: pie; */
+  background-color: var(--color1);
+  color: #ffffff;
+  padding: 15px 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 columnas de igual anchura */
+  column-gap: 20px;
+  align-items: center;
+  /* centra verticalmente el contenido en cada columna */
+  justify-items: center;
+  /* centra horizontalmente el contenido de cada columna */
+}
+
+/* columnas del footer */
+.footer-col {
+  width: 100%;
+  text-align: center;
+}
+
+/* Columna 1: autor en varias líneas */
+.footer-autor p {
+  margin: 2px 0;
+
+}
+
+/* Columna 2: icono CSS */
+.footer-css img {
+  max-width: 100px;
+  height: auto;
+  text-align: center;
+}
+
+/* Columna 3: redes sociales (iconos en fila) */
+.footer-redes a {
+  display: inline-block;
+  margin: 0 5px;
+  text-align: center;
+}
+
+.footer-redes img {
+  max-width: 32px;
+  height: auto;
+
+}
+
+/* Columna 4: enlaces de interés */
+.footer-enlaces ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+/* distancia para la lista de item*/
+.footer-enlaces li {
+  margin: 2px 0;
+}
+
+/**/
+.footer-enlaces a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-enlaces a:hover {
+  text-decoration: underline;
+}
+
+.error { border: 2px solid #c00; background: #fff6f6; }
+.error-msg { color: #c00; font-size: 0.9em; display:block; }

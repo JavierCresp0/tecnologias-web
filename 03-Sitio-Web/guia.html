@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Guía de estilo</title>
+    <!-- Enlaza el CSS correspondiente -->
+    <link rel="stylesheet" href="guia.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <!-- CABECERA -->
+        <header id="cabecera">
+            <div class="cabecera_grid">
+                <div class="titulo_web">
+                    <h1><a href="#">Guía de estilo</a></h1>
+                    <p>Descripción corta del sitio.</p>
+                </div>
+                <div class="buscador_web">
+                    <form action="#" aria-label="Buscar en el sitio">
+                        <input type="text" placeholder="Buscar..." aria-label="campo búsqueda">
+                        <input type="submit" value="OK" aria-label="botón buscar">
+                    </form>
+                </div>
+            </div>
+        </header>
+
+        <!-- MENU -->
+        <nav id="menu">
+            <ul class="lista_menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li>
+                    <a href="#">Productos</a>
+                    <ul class="submenu" aria-label="Submenú Productos">
+                        <li><a href="#">Playas</a></li>
+                        <li><a href="#">Aventura</a></li>
+                        <li><a href="#">Ciudades</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main id="principal" style="margin: 0 auto;">
+            <!-- Guía de estilo: Paleta / Tipografía / Espaciado (ejemplo visual) -->
+            <section class="card" style="background:var(--color6); border:0; padding:12px; margin-bottom:12px;">
+                <h2>Paleta</h2>
+                <div style="display:flex;gap:10px;flex-wrap:wrap">
+                    <div style="width:120px;height:80px;border-radius:6px;background:var(--color1);color:white;display:flex;align-items:end;padding:8px;">
+                        <div>
+                            <small>#1b325f</small>
+                            <div>--color1</div>
+                        </div>
+                    </div>
+
+                    <div style="width:120px;height:80px;border-radius:6px;background:var(--color2);display:flex;align-items:end;padding:8px;">
+                        <div>
+                            <small>#9cc4e4</small>
+                            <div>--color2</div>
+                        </div>
+                    </div>
+
+                    <div style="width:120px;height:80px;border-radius:6px;background:var(--color3);display:flex;align-items:end;padding:8px;">
+                        <div>
+                            <small>#e9f2f9</small>
+                            <div>--color3</div>
+                        </div>
+                    </div>
+
+                    <div style="width:120px;height:80px;border-radius:6px;background:var(--color4);display:flex;align-items:end;padding:8px;color:white">
+                        <div>
+                            <small>#3a89c9</small>
+                            <div>--color4</div>
+                        </div>
+                    </div>
+
+                    <div style="width:120px;height:80px;border-radius:6px;background:var(--color5);display:flex;align-items:end;padding:8px;color:white">
+                        <div>
+                            <small>#f26c4f</small>
+                            <div>--color5</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="margin-top:10px">Tipografía y espaciado</h3>
+                <ul>
+                    <li>Fuente: Arial, sans-serif (definida en guia.css).</li>
+                    <li>Tamaños: usa los valores presentes en la práctica; text-base y títulos con márgenes consistentes.</li>
+                    <li>Escala de espaciado: usa padding de 10–15px en contenedores según lo definido.</li>
+                </ul>
+            </section>
+
+            <!-- EJEMPLO: Productos -->
+            <section class="productos">
+                <h2 id="prod-title">Ejemplo: catálogo de productos</h2>
+
+                <h4 class="prod-title2">Producto normal</h4>
+                <div class="producto">
+                    <h3>Estados Unidos</h3>
+                    <img src="https://www.ytravelblog.com/wp-content/uploads/2018/07/statue-of-liberty-cruise-5-1.jpg" alt="Estatua de la Libertad">
+                    <p>7,05$</p>
+                    <p>Clase económica</p>
+                </div>
+
+                <h4 class="prod-title2">Producto premium y con descuento</h4>
+                <div class="productoPrem">
+                    <h3>México</h3>
+                    <img src="https://www.rci.com/static/images/content/_NAMER/landing/cancun/C94-hero-800x1100.jpg" alt="Playa en Cancún">
+                    <!-- Precio con anterior + nuevo -->
+                    <div class="precio">
+                        <span class="precio-original">9,00$</span>
+                        <span class="precio-nuevo">7,05$</span>
+                    </div>
+                    <p>Primera clase</p>
+                </div>
+            </section>
+
+            <!-- LISTADO NOTICIAS -->
+            <section id="listado-noticias" class="seccion" >
+                <h2>Ejemplo: Noticias</h2>
+
+                <!-- NOTICIA 1 - Ámbito NACIONAL -->
+                 <h4>  Ámbito NACIONAL  </h4>
+                <div class="noticia noticia-nacional">
+                    <h3 class="titular">Nueva línea de tren rápido Alicante–Madrid</h3>
+                    <h4 class="subtitulo">Reduce el tiempo de viaje a menos de 2 horas</h4>
+                    <p class="entradilla">Renfe ha anunciado una nueva conexión de alta velocidad entre Alicante y Madrid con más frecuencias diarias.</p>
+                    <p class="cuerpo-noticia">La nueva línea permitirá mejorar la conexión entre ambas ciudades, facilitando los viajes de ocio y negocios. Se espera un incremento significativo en el número de turistas que eligen el tren frente al avión.</p>
+                    <p class="meta-noticia">Ámbito: <span class="ambito">Nacional</span> · Fecha: 10/11/2025 · Autor: Redacción Viajes JaviEs ·
+                        <a class="enlace-original" href="https://www.renfe.com" target="_blank" rel="noopener noreferrer">Noticia original</a>
+                    </p>
+                </div>
+
+                <!-- NOTICIA 2 - Ámbito INTERNACIONAL -->
+                 <h4>  Ámbito INTERNACIONAL  </h4>
+                <div class="noticia noticia-internacional">
+                    <h3 class="titular">Europa impulsa el turismo sostenible</h3>
+                    <h4 class="subtitulo">Nuevos fondos para viajes con menor huella de carbono</h4>
+                    <p class="entradilla">La Unión Europea ha presentado un plan de ayudas para fomentar el turismo sostenible en los Estados miembros.</p>
+                    <p class="cuerpo-noticia">El programa financiará proyectos que reduzcan las emisiones asociadas al transporte y al alojamiento, premiando a agencias y empresas que apuesten por la sostenibilidad.</p>
+                    <p class="meta-noticia">Ámbito: <span class="ambito">Internacional</span> · Fecha: 05/11/2025 · Autor: Agencia Europa Travel ·
+                        <a class="enlace-original" href="https://europa.eu" target="_blank" rel="noopener noreferrer">Noticia original</a>
+                    </p>
+                </div>
+            </section>
+
+            <!-- INFOGRAFÍA -->
+            <section id="infografia">
+                <h2>Ejemplo: Infografía</h2>
+                <div class="infografia-contenedor">
+                    <div class="infografia-titulo">
+                        <h2>Infografía</h2>
+                        <h3>4 Easy Ways to Reduce Your Plastic Waste</h3>
+                    </div>
+
+                    <div class="section-tipo1">
+                        <div class="cajaDeTexto">
+                            <h4>Bring your own shopping bag</h4>
+                            <p>Reduce plastic waste by bringing your own reusable produce bags or skipping them entirely.</p>
+                        </div>
+                        <div class="cajaDeImagen">
+                            <img src="img/bolso.jpg" alt="Bolso reutilizable">
+                        </div>
+                    </div>
+
+                    <div class="section-tipo2">
+                        <div class="cajaDeTexto">
+                            <h4>Stop buying bottled water</h4>
+                            <p>Unless there's some kind of contamination crisis, plastic water bottles are an easy target for reducing waste.</p>
+                        </div>
+                        <div class="cajaDeImagen">
+                            <img src="img/botella.png" alt="Botella de plástico">
+                        </div>
+                    </div>
+
+                    <div class="section-tipo1">
+                        <div class="cajaDeTexto">
+                            <h4>Bring your own tumbler</h4>
+                            <p>Bringing your own tumbler for to-go coffee is another way to reduce your plastic footprint.</p>
+                        </div>
+                        <div class="cajaDeImagen">
+                            <img src="img/botella_reutilizable.png" alt="Botella reutilizable">
+                        </div>
+                    </div>
+
+                    <div class="section-tipo2">
+                        <div class="cajaDeTexto">
+                            <h4>Say no to straws</h4>
+                            <p>Plastic straws are often a single-use item that's just not necessary.</p>
+                        </div>
+                        <div class="cajaDeImagen">
+                            <img src="img/pagitas.png" alt="Pajitas">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- PIE DE PÁGINA -->
+        <footer id="pie">
+            <!-- Columna 1: autor en varias líneas -->
+            <div class="footer-col footer-autor">
+                <p>Autor: Esterly y Javi C.</p>
+                <p>Asignatura: Tecnologías Web</p>
+                <p>Curso 2025/2026</p>
+            </div>
+
+            <!-- Columna 2: icono validador CSS -->
+            <div class="footer-col footer-css">
+                <a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS válido" />
+                </a>
+            </div>
+
+            <!-- Columna 3: redes sociales (2 enlaces con imagen) -->
+            <div class="footer-col footer-redes">
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                    <img src="img/twiter.webp" alt="Twitter">
+                </a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                    <img src="img/instagram.png" alt="Instagram">
+                </a>
+            </div>
+
+            <!-- Columna 4: enlaces de interés -->
+            <div class="footer-col footer-enlaces">
+                <ul>
+                    <li><a href="https://www.umh.es" target="_blank" rel="noopener noreferrer">UMH</a></li>
+                    <li><a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
+                    <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

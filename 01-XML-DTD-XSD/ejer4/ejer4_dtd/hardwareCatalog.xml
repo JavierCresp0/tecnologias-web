@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hardwareCatalog SYSTEM "hardwareCatalog.dtd">
+<hardwareCatalog>
+    <item id= "cpu001">
+        <type>Processor</type>
+        <brand>Intel</brand>
+        <model>Core i7-9700K</model>
+        <specifications>8-Core, 3.6 GHz</specifications>
+    </item>
+    <item id= "ram002">
+        <type>RAM</type>
+        <brand>Corsair</brand>
+        <model>Vengeance LPX 16GB</model>
+        <specifications>DDR4, 3200MHz</specifications>
+    </item>
+    <item id= "gpu003">
+        <type>Graphics Card</type>
+        <brand>NVIDIA</brand>
+        <model>GeForce RTX 3080</model>
+        <specifications>10GB GDDR6X</specifications>
+    </item>
+</hardwareCatalog>

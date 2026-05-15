@@ -1,0 +1,11 @@
+<!ELEMENT novedades (fecha,(disco|libro)*)>
+<!ELEMENT fecha (#PCDATA)>
+
+<!ELEMENT disco (titulo,interprete,direccion?)>
+<!ATTLIST disco genero (rock|pop|melodica|clasica|dance) #REQUIRED >
+<!ELEMENT libro (titulo, autor+,direccion?)>
+
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT interprete (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>

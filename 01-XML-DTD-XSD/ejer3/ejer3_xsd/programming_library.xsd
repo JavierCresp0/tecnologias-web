@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="programming_library">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="language" minOccurs="3" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string" />
+                            <xs:element name="creator" type="xs:string" />
+                            <xs:element name="year_created" type="xs:integer" />
+                            <xs:element name="description" type="xs:string" />
+                            <xs:element name="day_created" type="xs:integer" />
+                        </xs:sequence>
+                        <xs:attribute name="dificultad" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="sencillo" />
+                                    <xs:enumeration value="intermedio" />
+                                    <xs:enumeration value="avanzado" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="velocidad" use="optional">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="lento" />
+                                    <xs:enumeration value="moderado" />
+                                    <xs:enumeration value="rapido" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="popularidad" use="optional">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="poca" />
+                                    <xs:enumeration value="media" />
+                                    <xs:enumeration value="mucha" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="trending" use="optional">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="alto" />
+                                    <xs:enumeration value="medio" />
+                                    <xs:enumeration value="bajo" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

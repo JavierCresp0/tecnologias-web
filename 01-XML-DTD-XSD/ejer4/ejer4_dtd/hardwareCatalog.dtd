@@ -1,0 +1,7 @@
+<!ELEMENT hardwareCatalog (item+)>
+<!ELEMENT item (type, brand, model, specifications)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT brand (#PCDATA)>
+<!ELEMENT model (#PCDATA)>
+<!ELEMENT specifications (#PCDATA)>
+<!ATTLIST item id ID #REQUIRED>

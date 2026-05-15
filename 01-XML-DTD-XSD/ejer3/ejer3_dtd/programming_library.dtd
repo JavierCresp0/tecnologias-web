@@ -1,0 +1,13 @@
+<!ELEMENT programming_library (language,language, language+)>
+<!ELEMENT language (name, creator, year_created, description, day_created)>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT creator (#PCDATA)>
+<!ELEMENT year_created (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT day_created (#PCDATA)>
+
+<!ATTLIST language dificultad (sencillo | intermedio | avanzado) #REQUIRED>
+<!ATTLIST language velocidad (lento | moderado | rapido) #IMPLIED>
+<!ATTLIST language popularidad (poca | media | mucha) #IMPLIED>
+<!ATTLIST language trending (bajo | medio | alto) #IMPLIED>

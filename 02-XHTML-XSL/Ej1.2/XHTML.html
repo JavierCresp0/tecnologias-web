@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+  <head>
+    <title>ej2</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+    <div>
+      <h1>Ej 1.2</h1>
+    </div>
+
+    <div>
+      <form method="post" action="mailto:mquesada@umh.es" enctype="multipart/form-data" accept-charset="UTF-8">
+        <table>
+          <tr>
+            <td>
+              <p><label for="nombre">First Name *</label></p>
+              <input id="nombre" name="Nombre" type="text" />
+            </td>
+            <td>
+              <p><label for="apellido">Last Name *</label></p>
+              <input id="apellido" name="Apellido" type="text" />
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2">
+              <p><label for="street">Street address *</label></p>
+              <input id="street" name="Street" type="text" style="width:100%;" />
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2">
+              <p><label for="apt">Apartment, suite, or unit#</label></p>
+              <input id="apt" name="Apt" type="text" style="width:100%;" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p><label for="city">City *</label></p>
+              <input id="city" name="City" type="text" />
+            </td>
+            <td>
+              <p><label for="state">State *</label></p>
+              <select id="state" name="State">
+                <option value="">--Seleccione--</option>
+                <option value="Californication">Californication</option>
+                <option value="New YOOOOOORK">New YOOOOOORK</option>
+                <option value="There is a house in New Orleans">There is a house in New Orleans</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p><label for="zip">Zip code *</label></p>
+              <input id="zip" name="Zip" type="text" maxlength="20" />
+            </td>
+            <td>
+              <p><label for="email">Email Address *</label></p>
+              <input id="email" name="Email" type="text" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p><label for="phone">Phone number *</label></p>
+              <input id="phone" name="Phone" type="text" />
+            </td>
+
+            <td>
+              <p>Type *</p>
+              <fieldset>
+                <legend class="sr-only">Tipo de teléfono</legend>
+                <label for="type_home"><input id="type_home" type="radio" name="type" value="home" /> Home</label>
+                <label for="type_work"><input id="type_work" type="radio" name="type" value="work" /> Work</label><br />
+                <label for="type_mobile"><input id="type_mobile" type="radio" name="type" value="mobile" /> Mobile</label>
+              </fieldset>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Enviar por e-mail" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
+

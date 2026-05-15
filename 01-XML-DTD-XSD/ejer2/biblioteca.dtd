@@ -1,0 +1,24 @@
+<!ELEMENT biblioteca (libro+, revista+, comic*)>
+
+
+<!--libros son elementos hijos de biblioteca-->
+<!ELEMENT libro (titulo,autor,editorial,año,precio,descripcion?,imagen)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT editorial (#PCDATA)>
+<!ELEMENT año (#PCDATA)>
+
+<!ELEMENT precio  (#PCDATA)>
+<!ATTLIST precio moneda CDATA #IMPLIED>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT imagen (#PCDATA)>
+
+<!--revistas son elementos hijos de biblioteca-->
+<!ELEMENT revista (titulo, autor, editorial, año, precio, articulo+)>
+<!ELEMENT articulo (titulo, autor,contenido)>
+<!ELEMENT contenido (#PCDATA)>
+
+<!--comics son elementos hijos de biblioteca-->
+<!ELEMENT comic (titulo, autor+, editorial)>
+<!ATTLIST comic genero (Terror | Aventura | CienciaFicción) #REQUIRED>
+<!ATTLIST comic idioma (es | in ) #REQUIRED>

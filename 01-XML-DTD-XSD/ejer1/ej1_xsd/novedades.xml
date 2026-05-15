@@ -1,0 +1,16 @@
+<?xml version="1.0"  standalone="no"?>
+<novedades xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="novedades.xsd">
+
+    <fecha>Octubre 2000</fecha>
+    <disco genero="pop">
+        <titulo>O sea</titulo>
+        <interprete>Enrique Iglesias</interprete>
+    </disco>
+    <libro>
+        <titulo>Aplicaciones web</titulo>
+        <autor>John McCarra</autor>
+        <autor>Frank Webini</autor>
+    </libro>
+
+</novedades>

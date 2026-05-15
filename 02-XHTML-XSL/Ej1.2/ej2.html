@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Ej1.2</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <header>
+        <h1>Ej 1.2 </h1>
+    </header>
+    <section>
+        <form method="post" action="mailto:mquesada@umh.es" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td>
+                        <p>First Name *</p> <input name="Nombre" type="text" required>
+                    </td>
+                    <td>
+                        <p>Last Name * </p> <input name="Apellido" type="text" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p>Street address *</p><input name="Street" type="text" required style="width:100%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p>Apartment, suite, or unit#</p><input name="Apt" type="text" style="width:100%;">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>City * </p> <input name="City" type="text" required>
+                    </td>
+                    <td>
+                        <p>State *</p><input name="list" list="browsers" required>
+                        <datalist id="browsers">
+                            <option value="Californication">
+                            <option value="New YOOOOOORK">
+                            <option value="There is a house in New Orleans">
+                        </datalist>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>Zip code * </p> <input name="Zip" type="number" required>
+                    </td>
+                    <td>
+                        <p>Email Address * </p> <input name="Email" type="email" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>Phone number *</p> <input name="Phone" type="tel" required>
+                    </td>
+
+                    <td>
+                        <p>Type * </p>
+                        <label><input type="radio" name="type" value="home" required> Home</label>
+                        <label><input type="radio" name="type" value="work"> Work</label><br>
+                        <label><input type="radio" name="type" value="mobile"> Mobile</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Enviar por e-mail">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>
+</body>

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Práctica - Layout con Grid</title>
+    <!-- Enlazamos la hoja de estilos -->
+    <link rel="stylesheet" href="contacto.css">
+</head>
+
+<!-- El body será el contenedor principal del grid -->
+
+<body class="contenedor">
+    <!-- CABECERA (FILA 1) -->
+    <header id="cabecera">
+        <!-- Grid interno 80% / 20%: izquierda título, derecha buscador -->
+        <div class="cabecera_grid">
+            <!-- Columna izquierda: título + descripción, ambos enlazan a index -->
+            <div class="titulo_web">
+                <h1><a href="index.html">Viajes JaviEs</a></h1>
+                <p><a href="index.html">Viajes al mejor precio del mundo</a></p>
+            </div>
+
+            <!-- Columna derecha: buscador que manda la búsqueda a Google -->
+            <div class="buscador_web">
+                <form action="https://www.google.com/search" method="get" target="_blank">
+                    <!-- name="q" es el parámetro que entiende Google -->
+                    <input id="busqueda" name="q" type="text" placeholder="Buscar en Google..." />
+                    <input type="submit" value="Buscar" />
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- MENÚ HORIZONTAL (FILA 2) -->
+    <nav id="menu">
+        <!-- Lista principal (nivel 1). El submenú va dentro de Productos -->
+        <ul class="lista_menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li>
+                <a href="productos.html">Productos</a>
+                <!-- Submenú (nivel 2), desplegable al pasar el ratón -->
+                <ul class="submenu">
+                    <li><a href="productos.html#America">America</a></li>
+                    <li><a href="productos.html#Europa">Europa</a></li>
+                    <li><a href="productos.html#Asia">Asia</a></li>
+                </ul>
+            </li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL (FILA 3, IZQUIERDA) -->
+    <main id="principal">
+        <h2>Contacto</h2>
+
+        <form method="post" action="mailto:mquesada@umh.es" enctype="multipart/form-data">
+            <fieldset id="container2">
+                <legend>Datos personales</legend>
+                <div id="Fname">
+                    <label for="firstName">First Name *</label>
+                    <input id="firstName" name="Nombre" type="text" required>
+                </div>
+
+                <div id="Lname">
+                    <label for="lastName">Last Name *</label>
+                    <input id="lastName" name="Apellido" type="text" required>
+                </div>
+
+                <div id="Street">
+                    <label for="street">Street address *</label>
+                    <input id="street" name="Street" type="text" required style="width:100%;">
+                </div>
+
+                <div id="Apartment">
+                    <label for="apt">Apartment, suite, or unit#</label>
+                    <input id="apt" name="Apt" type="text" style="width:100%;">
+                </div>
+
+                <div id="City">
+                    <label for="city">City *</label>
+                    <input id="city" name="City" type="text" required>
+                </div>
+
+                <div id="State">
+                    <label for="state">State *</label>
+                    <input id="state" name="State" list="browsers" required>
+                    <datalist id="browsers">
+                        <option value="Californication">
+                        <option value="New YOOOOOORK">
+                        <option value="There is a house in New Orleans">
+                    </datalist>
+                </div>
+
+                <div id="Zip">
+                    <label for="zip">Zip code *</label>
+                    <input id="zip" name="Zip" type="number" required>
+                </div>
+
+                <div id="Email">
+                    <label for="email">Email Address *</label>
+                    <input id="email" name="Email" type="email" required>
+                </div>
+
+                <div id="Phone">
+                    <label for="phone">Phone number *</label>
+                    <input id="phone" name="Phone" type="tel" required>
+                </div>
+
+                <div id="Type">
+                    <label>Type * </label>
+                    <label><input type="radio" name="type" value="home" required> Home</label>
+                    <label><input type="radio" name="type" value="work"> Work</label>
+                    <label><input type="radio" name="type" value="mobile"> Mobile</label>
+                </div>
+
+                <div id="Boton">
+                    <button type="submit">Enviar</button>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+
+    <!-- INFOGRAFÍA (FILA 3, DERECHA) -->
+    <section id="infografia">
+        <!--Contenedor para la infografia-->
+        <div class="infografia-contenedor">
+            <div class="infografia-titulo">
+                <h2>Infografía</h2>
+                <h3>4 Easy Ways to Reduce Your Plastic Waste</h3>
+            </div>
+            <!--Sección tipo 1-->
+            <div class="section-tipo1">
+                <div class="cajaDeTexto">
+                    <h4>Bring your own shopping bag</h4>
+                    <p>Reduce plastic waste by bringing your own reusable produce bags or skipping them entirely.</p>
+                </div>
+                <div class="cajaDeImagen">
+                    <img src="img/bolso.jpg" alt="Bolso_Reutilizable">
+                </div>
+            </div>
+            <!--Sección tipo 2-->
+            <div class="section-tipo2">
+                <div class="cajaDeTexto">
+                    <h4>Stop buying bottled water</h4>
+                    <p>Unless there's some kind of contamination crisis, plastic water bottles
+                        are an easy target for reducing waste.</p>
+                </div>
+                <div class="cajaDeImagen">
+                    <img src="img/botella.png" alt="Botella_de_plastico">
+                </div>
+            </div>
+            <!--Sección tipo 1-->
+            <div class="section-tipo1">
+                <div class="cajaDeTexto">
+                    <h4>Bring your own tumbler</h4>
+                    <p>Bringing your own tumbler for to-go coffee is another way to reduce your plastic footprint.</p>
+                </div>
+                <div class="cajaDeImagen">
+                    <img src="img/botella_reutilizable.png" alt="Botella_reutilizable">
+                </div>
+            </div>
+            <!--Sección tipo 2-->
+            <div class="section-tipo2">
+                <div class="cajaDeTexto">
+                    <h4>Say no to straws</h4>
+                    <p>Plastic straws are often a single-use item that's just not necessary.</p>
+                </div>
+                <div class="cajaDeImagen">
+                    <img src="img/pagitas.png" alt="Pajitas">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PIE DE PÁGINA (FILA 4) -->
+    <footer id="pie">
+        <!-- Columna 1: autor en varias líneas -->
+        <div class="footer-col footer-autor">
+            <p>Autor: Esterly y Javi C.</p>
+            <p>Asignatura: Tecnologías Web</p>
+            <p>Curso 2025/2026</p>
+        </div>
+        <!-- Columna 2: icono validador CSS -->
+        <div class="footer-col footer-css">
+            <a href="https://jigsaw.w3.org/css-validator/" target="_blank">
+                <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS válido" />
+            </a>
+        </div>
+        <!-- Columna 3: redes sociales (2 enlaces con imagen) -->
+        <div class="footer-col footer-redes">
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="img/twiter.webp" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="img/instagram.png" alt="Instagram">
+            </a>
+        </div>
+        <!-- Columna 4: enlaces de interés -->
+        <div class="footer-col footer-enlaces">
+            <ul>
+                <li><a href="https://www.umh.es" target="_blank">UMH</a></li>
+                <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+                <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

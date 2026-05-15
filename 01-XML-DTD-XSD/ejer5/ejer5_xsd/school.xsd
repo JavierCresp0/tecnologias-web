@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="school">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="student" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string" />
+                            <xs:element name="age" type="xs:int" />
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:ID" use="required" />
+                        <xs:attribute name="status" use="optional">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="active" />
+                                    <xs:enumeration value="inactive" />
+                                    <xs:enumeration value="graduated" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Práctica - Layout con Grid</title>
+    <!-- Enlazamos la hoja de estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<!-- El body será el contenedor principal del grid -->
+
+<body class="contenedor">
+    <!-- CABECERA (FILA 1) -->
+    <header id="cabecera">
+        <!-- Grid interno 80% / 20%: izquierda título, derecha buscador -->
+        <div class="cabecera_grid">
+            <!-- Columna izquierda: título + descripción, ambos enlazan a index -->
+            <div class="titulo_web">
+                <h1><a href="index.html">Viajes JaviEs</a></h1>
+                <p><a href="index.html">Viajes al mejor precio del mundo</a></p>
+            </div>
+
+            <!-- Columna derecha: buscador que manda la búsqueda a Google -->
+            <div class="buscador_web">
+                <form action="https://www.google.com/search" method="get" target="_blank">
+                    <!-- name="q" es el parámetro que entiende Google -->
+                    <input id="busqueda" name="q" type="text" placeholder="Buscar en Google..." />
+                    <input type="submit" value="Buscar" />
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- MENÚ HORIZONTAL (FILA 2) -->
+    <nav id="menu">
+        <!-- Lista principal (nivel 1). El submenú va dentro de Productos -->
+        <ul class="lista_menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li>
+                <a href="productos.html">Productos</a>
+                <!-- Submenú (nivel 2), desplegable al pasar el ratón -->
+                <ul class="submenu">
+                    <li><a href="productos.html#America">America</a></li>
+                    <li><a href="productos.html#Europa">Europa</a></li>
+                    <li><a href="productos.html#Asia">Asia</a></li>
+                </ul>
+            </li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL (FILA 3, IZQUIERDA) -->
+    <main id="principal">
+        <!--Parte de la bienvenida-->
+        <section id="bienvenida" class="seccion">
+            <h2>Bienvenido a Viajes JaviEs</h2>
+            <p>
+                En Viajes JaviEs queremos ayudarte a encontrar tu viaje ideal al mejor precio:
+                escapadas de fin de semana, grandes viajes y vacaciones en familia.
+            </p>
+            <p>
+                En esta página podrás descubrir nuestras ofertas destacadas, los servicios
+                que ofrecemos y las sedes físicas donde podemos atenderte en persona.
+            </p>
+        </section>
+        <!--Las ofertas destacas -->
+        <section id="ofertas" class="seccion">
+            <h2>Ofertas destacadas</h2>
+            <div class="tarjetas-viaje">
+                <div class="tarjeta-viaje">
+                    <h3>Escapada a París</h3>
+                    <p>3 días / 2 noches con vuelo y hotel incluido.</p>
+                    <ul>
+                        <li>Salida desde Alicante</li>
+                        <li>Desayuno incluido</li>
+                        <li>Tour guiado por la ciudad</li>
+                    </ul>
+                    <p class="precio">Desde 299 € por persona</p>
+                </div>
+                <div class="tarjeta-viaje">
+                    <h3>Ruta por las islas Canarias</h3>
+                    <p>7 noches recorriendo Tenerife y Gran Canaria.</p>
+                    <ul>
+                        <li>Vuelos de ida y vuelta</li>
+                        <li>Hoteles 4★ con media pensión</li>
+                        <li>Seguro de viaje incluido</li>
+                    </ul>
+                    <p class="precio">Desde 749 € por persona</p>
+                </div>
+            </div>
+        </section>
+        <!--Servicios de la tienda -->
+        <section id="servicios" class="seccion">
+            <h2>¿Por qué reservar con nosotros?</h2>
+            <div class="servicios-grid">
+                <div class="servicio">
+                    <h3>Asesoramiento personalizado</h3>
+                    <p>Te ayudamos a elegir el viaje que mejor se adapte a tu presupuesto y tus fechas.</p>
+                </div>
+                <div class="servicio">
+                    <h3>Pago flexible</h3>
+                    <p>Posibilidad de financiar tu viaje y pagar en varios plazos.</p>
+                </div>
+                <div class="servicio">
+                    <h3>Atención 24/7</h3>
+                    <p>Servicio de atención al cliente durante todo el viaje ante cualquier imprevisto.</p>
+                </div>
+            </div>
+        </section>
+        <!--Mapa con las sedes-->
+        <section id="sedes" class="seccion">
+            <h2>Nuestras sedes</h2>
+            <div class="sedes-grid">
+                <div class="sede">
+                    <h3>Sede Alicante</h3>
+                    <p>
+                        Calle del Mar, 10<br>
+                        03001 Alicante<br>
+                        Tel: 965 000 111
+                    </p>
+                    <iframe
+                        title="Mapa sede Alicante"
+                        src="https://maps.google.com/maps?q=Alicante,%20España&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="sede">
+                    <h3>Sede Madrid</h3>
+                    <p>
+                        Gran Vía, 25<br>
+                        28013 Madrid<br>
+                        Tel: 911 222 333
+                    </p>
+                    <iframe
+                        title="Mapa sede Madrid"
+                        src="https://maps.google.com/maps?q=Madrid,%20España&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- INFOGRAFÍA (FILA 3, DERECHA) -->
+    <section id="infografia">
+        <!--Contenedor para la infografia-->
+        <div class="infografia-contenedor">
+            <div class="infografia-titulo">
+                <h2>Infografía</h2>
+                <h3>4 Easy Ways to Reduce Your Plastic Waste</h3>
+            </div>
+            <!--Sección tipo 1-->
+            <div class="section-tipo1">
+                <div class="cajaDeTexto">
+                    <h4>Bring your own shopping bag</h4>
+                    <p>Reduce plastic waste by bringing your own reusable produce bags or skipping them entirely.</p>
+                </div>
+                <div class="cajaDeImagen">
+                    <img src="img/bolso.jpg" alt="Bolso_Reutilizable">
+                </div>
+            </div>
+            <!--Sección tipo 2-->
+            <div class="section-tipo2">
+                <div class="cajaDeTexto">
+                    <h4>Stop buying bottled water</h4>
+                    <p>Unless there's some kind of contamination crisis, plastic water bottles
+                        are an easy target for reducing waste.</p>
+                </div>
+                <div class="cajaDeImagen">
+                    <img src="img/botella.png" alt="Botella_de_plastico">
+                </div>
+            </div>
+            <!--Sección tipo 1-->
+            <div class="section-tipo1">
+                <div class="cajaDeTexto">
+                    <h4>Bring your own tumbler</h4>
+                    <p>Bringing your own tumbler for to-go coffee is another way to reduce your plastic footprint.</p>
+                </div>
+                <div class="cajaDeImagen">
+                    <img src="img/botella_reutilizable.png" alt="Botella_reutilizable">
+                </div>
+            </div>
+            <!--Sección tipo 2-->
+            <div class="section-tipo2">
+                <div class="cajaDeTexto">
+                    <h4>Say no to straws</h4>
+                    <p>Plastic straws are often a single-use item that's just not necessary.</p>
+                </div>
+                <div class="cajaDeImagen">
+                    <img src="img/pagitas.png" alt="Pajitas">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PIE DE PÁGINA (FILA 4) -->
+    <footer id="pie">
+        <!-- Columna 1: autor en varias líneas -->
+        <div class="footer-col footer-autor">
+            <p>Autor: Esterly y Javi C.</p>
+            <p>Asignatura: Tecnologías Web</p>
+            <p>Curso 2025/2026</p>
+        </div>
+        <!-- Columna 2: icono validador CSS -->
+        <div class="footer-col footer-css">
+            <a href="https://jigsaw.w3.org/css-validator/" target="_blank">
+                <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS válido" />
+            </a>
+        </div>
+        <!-- Columna 3: redes sociales (2 enlaces con imagen) -->
+        <div class="footer-col footer-redes">
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="img/twiter.webp" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="img/instagram.png" alt="Instagram">
+            </a>
+        </div>
+        <!-- Columna 4: enlaces de interés -->
+        <div class="footer-col footer-enlaces">
+            <ul>
+                <li><a href="https://www.umh.es" target="_blank">UMH</a></li>
+                <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+                <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

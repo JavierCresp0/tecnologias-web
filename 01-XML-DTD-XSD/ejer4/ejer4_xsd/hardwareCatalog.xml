@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hardwareCatalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="hardwareCatalog.xsd"> 
+    <item id="s1">
+        <type>Processor</type>
+        <brand>Intel</brand>
+        <model>Core i7-9700K</model>
+        <specifications>
+            <name>8-Core, 3.6 GHz</name>
+            <description>1234</description>
+        </specifications>
+    </item>
+    <item id="s2">
+        <type>RAM</type>
+        <brand>Corsair</brand>
+        <model>Vengeance LPX 16GB</model>
+        <specifications>
+            <name>DDR4, 3200MHz</name>
+            <description>1234</description>
+        </specifications>
+
+    </item>
+    <item id="s3">
+        <type>Graphics Card</type>
+        <brand>NVIDIA</brand>
+        <model>GeForce RTX 3080</model>
+        <specifications>
+            <name>10GB GDDR6X</name>
+            <description>1234</description>
+        </specifications>
+    </item>
+</hardwareCatalog>

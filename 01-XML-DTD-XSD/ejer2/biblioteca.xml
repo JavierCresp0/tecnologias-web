@@ -1,0 +1,44 @@
+<?xml version="1.0"  standalone="no"?>
+<!DOCTYPE biblioteca SYSTEM "biblioteca.dtd">
+<biblioteca>
+    <libro>
+        <titulo>Aplicaciones web</titulo>
+        <autor>Juan Pérez</autor>
+        <editorial>Editorial A</editorial>
+        <año>2020</año>
+        <precio moneda="EUR">20</precio>
+        <descripcion>Libro sobre aplicaciones web</descripcion>
+        <imagen>https://img.freepik.com/vector-premium/caricatura-libro-abierto-paginas-abiertas_889056-198211.jpg?w=2000</imagen>
+    </libro>
+
+    
+    <libro> 
+        <titulo>Introducción a XML</titulo>
+        <autor>María López</autor>
+        <editorial>Editorial B</editorial>
+        <año>2018</año>
+        <precio moneda="EUR">15</precio>
+        <descripcion>Guía básica para aprender XML</descripcion>
+        <imagen>https://img.freepik.com/vector-premium/caricatura-libro-abierto-paginas-abiertas_889056-198211.jpg?w=2000</imagen>
+    </libro>
+
+    <revista>
+        <titulo>Revista de programación</titulo>
+        <autor>Pedro Gómez</autor>
+        <editorial>Editorial C</editorial>
+        <año>2021</año>
+        <precio moneda="EUR">10</precio>
+        <articulo>
+            <titulo>Las mejores prácticas en programación</titulo>
+            <autor>Laura Martínez</autor>
+            <contenido>Contenido del artículo</contenido>
+        </articulo>
+    </revista>
+
+    <comic genero="Aventura"  idioma="es">
+        <titulo>Las historias de Javi y Esterly</titulo>
+        <autor>Pepe el Grillo</autor>
+        <editorial>Carlo.ink</editorial>  
+    </comic>
+
+</biblioteca>
