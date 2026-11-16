@@ -2,6 +2,17 @@
 
 Conjunto de prácticas de la asignatura **Tecnologías Web** (3º curso) que recorren las tecnologías fundamentales del frontend: desde el modelado de datos con **XML/XSD** hasta sitios web completos con **HTML5**, **CSS3** y validación con **JavaScript**.
 
+## 🌐 Ver en vivo
+
+El repositorio está publicado con GitHub Pages, así que se puede probar sin descargar nada:
+
+| Qué | Enlace |
+|-----|--------|
+| Sitio web completo (HTML5 + CSS3) | [javiercresp0.github.io/tecnologias-web/03-Sitio-Web/](https://javiercresp0.github.io/tecnologias-web/03-Sitio-Web/) |
+| Formulario con validación en JavaScript | [04-JavaScript-Validacion/FormularioValidar/contacto.html](https://javiercresp0.github.io/tecnologias-web/04-JavaScript-Validacion/FormularioValidar/contacto.html) |
+| Catálogo con manipulación del DOM | [04-JavaScript-Validacion/ProductosP3/productos.html](https://javiercresp0.github.io/tecnologias-web/04-JavaScript-Validacion/ProductosP3/productos.html) |
+| XML transformado con XSLT | [02-XHTML-XSL/Ej2.1/empresa.xml](https://javiercresp0.github.io/tecnologias-web/02-XHTML-XSL/Ej2.1/empresa.xml) |
+
 ## 📚 Contenido
 
 ### 🔹 01 · XML, DTD y XSD
@@ -40,7 +51,7 @@ Validación de formularios en cliente con **JavaScript** y manipulación dinámi
 
 ## 🚀 Cómo visualizar
 
-Abre cualquier archivo `.html` directamente en un navegador, o sirve la carpeta con un servidor local:
+Lo más rápido es usar los enlaces de [Ver en vivo](#-ver-en-vivo). En local, abre cualquier archivo `.html` directamente en un navegador, o sirve la carpeta con un servidor:
 
 ```bash
 # Python 3
